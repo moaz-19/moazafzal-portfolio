@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Moaz Afzal | Portfolio{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- Modern sans-serif fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <a href="{{ url_for('home') }}" class="logo">Moaz Afzal</a>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('experience') }}">Experience</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content container">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash-messages">
+        {% for message in messages %}
+          <div class="flash">{{ message }}</div>
+        {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; {{ 2025 }} Moaz Afzal</p>
+    </div>
+  </footer>
+</body>
+</html>

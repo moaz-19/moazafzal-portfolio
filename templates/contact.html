@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Moaz Afzal | Contact{% endblock %}
+{% block content %}
+<section class="section card-white">
+  <h2>Contact</h2>
+  <div class="projects-grid">
+    <div class="project-card card-black">
+      <p>
+        Want to chat about a project, collaborate, or just say hi? Message me below or email:
+        <a href="mailto:your.email@example.com" style="color: #007aff;">your.email@example.com</a>
+      </p>
+      <form class="contact-form" method="POST" action="{{ url_for('contact') }}">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

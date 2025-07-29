@@ -1,0 +1,274 @@
+:root {
+  --background: #b6bcc6;       /* darker background */
+  --black: #181818;
+  --white: #fff;
+  --accent: #007aff;
+  --text: #181818;
+  --text-light: #454545;
+  --card-shadow: 0 6px 32px rgba(40,40,40,.07);
+  --radius: 11px;
+  --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-heading: 'Montserrat', Arial, sans-serif;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-main);
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.3rem;
+}
+
+.navbar {
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--radius);
+  margin: 2rem auto 2rem auto;
+  padding: 0.8rem 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  transition: color 0.2s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+}
+
+.main-content {
+  min-height: 70vh;
+}
+
+footer {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: 3.5rem 0 0 0;
+  padding: 1.2rem 0 1.5rem 0;
+}
+
+/* Card and Section Blocks */
+.card-black {
+  background: var(--black);
+  color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.card-white {
+  background: var(--white);
+  color: var(--text);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin-top: 0;
+}
+
+h2 {
+  color: var(--accent);
+  font-size: 2.2rem;
+  margin-bottom: 1.2em;
+  letter-spacing: 1px;
+}
+
+.hero {
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  color: var(--white);
+}
+
+.hero h2, .section h2 {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.lead {
+  color: var(--white);
+  font-size: 1.07em;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 0.7em 2.1em;
+  border-radius: 7px;
+  font-size: 1.09em;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 1.8em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color .18s;
+}
+
+.cta-btn:hover {
+  background: #0051b7;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem 2.5rem;
+  list-style: none;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  color: var(--accent);
+}
+
+.timeline .job {
+  margin-bottom: 2rem;
+}
+
+.timeline h3, .projects-grid h3 {
+  color: var(--accent);
+  font-size: 1.23rem;
+}
+
+.timeline .date {
+  color: var(--text-light);
+  font-size: 0.97em;
+  margin-bottom: 0.2em;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.projects-grid > .project-card {
+  flex: 1 1 100%;
+  max-width: 600px;   /* You can make this bigger, like 700px, for even wider cards */
+  min-width: 320px;
+  width: 100%;
+}
+
+.contact-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  max-width: 420px;
+  margin-top: 1.3em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.78em;
+  border-radius: 6px;
+  border: 1px solid var(--black);
+  resize: none;
+  font-size: 1em;
+  font-family: var(--font-main);
+}
+
+.contact-form button {
+  background: var(--black);
+  color: var(--white);
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em;
+  margin-top: 0.2em;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  transition: background 0.18s, color .18s;
+}
+
+.contact-form button:hover {
+  background: var(--accent);
+  color: var(--black);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container, .main-content {
+    padding: 0 0.5rem;
+  }
+  .navbar {
+    flex-direction: column;
+    padding: 1.2rem 1rem;
+    gap: 1rem;
+  }
+  .projects-grid {
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  .card-black, .card-white {
+    padding: 1.5rem 1rem;
+  }
+}
+.flash-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0 1rem 0;
+}
+.flash {
+  background: var(--accent);
+  color: var(--white);
+  padding: 0.75em 1.7em;
+  border-radius: var(--radius);
+  margin-top: 0.5em;
+  box-shadow: var(--card-shadow);
+  font-size: 1.08em;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
